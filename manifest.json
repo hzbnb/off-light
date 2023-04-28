@@ -1,0 +1,28 @@
+{
+    "name":"一键关灯",
+    "version":"1.0.0",
+    "manifest_version":3,
+    "description":"点击一键关灯，转换成深色模式～",
+    "icons":{
+        "128": "icons/offlight128x128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+            "<all_urls>"
+            ],
+            "js": [
+                "lib/jquery.min.js",
+                "js/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+		"storage",
+        "tabs"
+	],
+    "action":{
+        "default_title":"变色插件",
+        "default_popup":"html/popup.html"
+    }
+}
