@@ -1,4 +1,10 @@
 const checkbox = document.getElementById("checkbox");
+const url = document.getElementById("url");
+if(url){
+    url.onclick = function() {
+        chrome.tabs.create({ url:"https://github.com/hzbnb/off-light" },()=>{window.close();});
+    }
+}
 if (checkbox) {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         chrome.tabs.sendMessage(
